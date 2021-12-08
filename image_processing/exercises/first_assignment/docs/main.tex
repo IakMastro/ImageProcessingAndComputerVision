@@ -7,11 +7,31 @@
 \usepackage{alphabeta}
 \usepackage{lmodern}
 
-\usepackage[T1]{fontenc} 
-\usepackage{graphicx} 
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
 \usepackage{booktabs}
-\usepackage{listings} 
 \usepackage{enumerate}
+\usepackage{float}
+
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+}
+
+\usepackage[hidelinks]{hyperref}
 
 \title{Πρώτη εργαστηριακή εργασία}
 \author{Ιάκωβος Μαστρογιαννόπουλος}
@@ -23,18 +43,17 @@
 \includegraphics[width=25mm]{Figures/Logo}
 \maketitle
 
+\begin{abstract}
+	Στην πρώτη εργαστηριακή εργασία, ζητείται να υλοποιηθούν δύο παραδείγματα επεξεργασίας εικόνας. Το πρώτο παράδειγμα, πρέπει να χρησιμοποιηθεί ο αλγόριθμος solarize
+	για να δημιουργηθεί το φαινόμενο Sabbatier. Στο δεύτερο παράδειγμα, πρέπει να προστεθεί θόρυβος σε μία εικόνα, με την χρήση του salt and pepper και να τον αφαιρεί με χρήση φίλτρων.
+	Υλοποιήθηκε σε γλώσσα προγραμματισμού Python, έκδοση 3.9.9 σε περιβάλλον Linux.
+\end{abstract}
+
 \newpage
 \tableofcontents
-\newpage
 \lstlistoflistings
 \listoffigures
 \listoftables
-
-\newpage
-\begin{abstract}
-	Στην πρώτη εργαστηριακή εργασία, ζητήτε να υλοποιηθούν δύο παραδείγματα επεξεργασίας είκονας. Το πρώτο παράδειγμα, πρέπει να χρησιμοποιήθει η συνάρτηση solarize 
-	για να δημιουργηθεί το φαινόμενο Sabbatier. Στο δεύτερο παράδειγμα, πρέπει να προσθεθεί θόρυβος σε μία εικόνα, με την χρήση του salt and pepper και να αφαιρεί τον χρόνο. 
-\end{abstract}
 
 \newpage
 \include{Chapters/Chapter1}
