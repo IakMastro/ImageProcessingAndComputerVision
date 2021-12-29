@@ -1,0 +1,63 @@
+\documentclass[
+  11pt,
+  singlespacing,
+  liststotoc,
+  toctotoc,
+  headspline
+]{fphw}
+
+\usepackage{alphabeta}
+\usepackage{lmodern}
+
+\usepackage{fontenc}
+\usepackage{xgreek}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+\usepackage[Greek,Latin]{ucharclasses}
+\setTransitionsForGreek{\setlanguage{greek}}{\setlanguage{american}}
+
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\newfontfamily{\greekfont}{CMU Serif}
+\newfontfamily{\greekfontsf}{CMU Sans Serif}
+
+\setmainfont{GFS Didot}
+
+\usepackage[]{unicode-math}
+\setmathfont{Latin Modern Math}
+
+\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumerate}
+\usepackage{float}
+
+\usepackage[hidelinks]{hyperref}
+
+\title{Δεύτερη Εργαστηριακή Εργασία}
+\author{Ιάκωβος Μαστρογιαννόπουλος}
+\institute{Πανεπιστημιο Δυτικης Αττικης \\ Τμημα Μηχανικων Πληροφορικης και Υπολογιστων}
+\class{Επεξεργασία Εικόνας}
+\professor{Εύτυχιος Πρωτοπαπαδάκης}
+
+\begin{document}
+\includegraphics[width=25mm]{Figures/Logo}
+\maketitle
+
+\begin{abstract}
+  Αυτή είναι η δεύτερη εργαστηριακή εργασία για το μάθημα <<Επεξεργασία Εικόνας>> του φοιτητή Ιάκωβος Μαστρογιαννόπουλος, 713242017102. Η εργασία είναι χωρισμένη σε δύο μέρη. Στο πρώτο μέρος πρέπει να μελετηθούν οι χώροι χρώματος και να γίνει κατάτμηση μίας εικόνας. Στο δεύτερο μέρος πρέπει να γίνει ανίχνευση των ακμών μιας εικόνας. Η συγκεκριμένη εργασία υλοποιήθηκε στην γλώσσα προγραμματισμού Python, έκδοση 3.10.1 σε περιβάλλον Linux.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+\include{Chapters/Chapter1}
+\end{document}
