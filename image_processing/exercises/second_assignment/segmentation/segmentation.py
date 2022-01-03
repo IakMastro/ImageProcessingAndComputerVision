@@ -59,7 +59,7 @@ def segmentation(image, shape, color_code, channel_amount, algorithm, algorithm_
   n_clusters = len(labels_unique)
   print(f"\tClusters: {n_clusters}")
   segmented_image = (label2rgb(np.reshape(labels, shape[:2]), bg_label=0) * 255).astype(np.uint8)
-  plot(f"{color_code}_{algorithm_name}", f"{color_code} {algorithm_name}", segmented_image)
+  # plot(f"{color_code}_{algorithm_name}", f"{color_code} {algorithm_name}", segmented_image)
   print(f"\tSilhouette Score: {silhouette_score(image, labels, sample_size=25000)}")
 
 
@@ -87,8 +87,8 @@ if __name__ == '__main__':
 
   # RGB's 3D plot and histogram
   red_channel, green_channel, blue_channel = cv2.split(image)
-  plot_3d(blue_channel, green_channel, red_channel)
-  plot_histogram(image, ('Red', 'Green', 'Blue'), 256, "RGB Histogram", "rgb_histogram")
+  # plot_3d(blue_channel, green_channel, red_channel)
+  # plot_histogram(image, ('Red', 'Green', 'Blue'), 256, "RGB Histogram", "rgb_histogram")
   segment_image(image, "RGB")
 
   # Convert RGB to HSV
@@ -97,8 +97,8 @@ if __name__ == '__main__':
 
   # HSV's 3D plot and histogram
   hue_channel, saturation_channel, value_channel = cv2.split(hsv_image)
-  plot_3d(hue_channel, saturation_channel, value_channel, "hsv_3d", 'HSV Colors', 'Hue', 'Saturation', 'Value')
-  plot_histogram(hsv_image, ('Hue', 'Saturation', 'Value'), 256, "Hue Histogram", "hue_histogram")
+  # plot_3d(hue_channel, saturation_channel, value_channel, "hsv_3d", 'HSV Colors', 'Hue', 'Saturation', 'Value')
+  # plot_histogram(hsv_image, ('Hue', 'Saturation', 'Value'), 256, "Hue Histogram", "hue_histogram")
   segment_image(hsv_image, "HSV")
 
   # Combine RGB and HSV
